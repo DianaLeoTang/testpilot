@@ -1,18 +1,19 @@
-/*
- * @Author: Diana Tang
- */
 import fs from 'fs';
 import path from 'path';
 
-export function generateTests(files: string[]) {
-  const testDir = path.join(process.cwd(), 'tests');
+export function generateTests(files: string[], testDir: string = 'tests') {
   if (!fs.existsSync(testDir)) {
     fs.mkdirSync(testDir, { recursive: true });
   }
 
   files.forEach((filePath) => {
     const fileName = path.basename(filePath, path.extname(filePath));
-    const importPath = path.relative(testDir, filePath).replace(/\\/g, '/').replace(/\.ts$/, '');
+    const importPath = path
+      .relative(testDir, filePath)
+      .replace(/\\/g, '/')
+      .replace(/\.ts$/, '')
+      .replace(/\.js$/, '');
+
     const outputPath = path.join(testDir, `${fileName}.test.ts`);
 
     const content = `
@@ -22,13 +23,8 @@ describe('${fileName}', () => {
   });
 });
 
-// Optional: uncomment if you want to import and test the module
 // import { ${fileName} } from '${importPath}';
-// describe('${fileName}', () => {
-//   it('should do something meaningful', () => {
-//     expect(${fileName}).toBeDefined();
-//   });
-// });
+// Add actual test logic above
 `.trimStart();
 
     fs.writeFileSync(outputPath, content);

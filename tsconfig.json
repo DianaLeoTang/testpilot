@@ -18,5 +18,5 @@
   "paths": {
     "src/*": ["src/*"]
   },
-  "include": ["index.ts", "src/**/*.ts", "tests/**/*.ts", "templates/**/*.ts"]
+  "include": ["index.ts", "src/**/*.ts", "tests/**/*.ts"]
 }

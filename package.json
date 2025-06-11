@@ -3,10 +3,19 @@
   "version": "1.0.0",
   "description": "A universal MCP for automated testing in any Node.js project.",
   "main": "index.ts",
+  "bin": {
+    "testpilot": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "templates"
+  ],
   "scripts": {
-    "generate": "ts-node index.ts generate",
-    "run": "ts-node index.ts run",
-    "report": "ts-node index.ts report",
+    "build": "tsc",
+    "generate": "ts-node src/index.ts generate",
+    "run": "ts-node src/index.ts run",
+    "report": "ts-node src/index.ts report",
     "test": "jest"
   },
   "devDependencies": {
