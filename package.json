@@ -1,17 +1,23 @@
 {
-  "name": "testpilot",
+  "name": "ai-testpilot",
   "version": "1.0.0",
-  "description": "A universal MCP for automated testing in any Node.js project.",
-  "main": "index.ts",
+  "description": "An AI-powered zero-config CLI for generating test stubs for Node.js projects",
   "bin": {
-    "testpilot": "./bin/cli.js"
+    "ai-testpilot": "./bin/cli.js"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "bin",
     "dist",
     "templates"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DianaLeoTang/testpilot.git"
+  },
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "tsc",
     "generate": "ts-node src/index.ts generate",
     "run": "ts-node src/index.ts run",
@@ -37,13 +43,21 @@
     }
   },
   "keywords": [
+    "ai",
     "mcp",
     "automation",
     "test",
     "jest",
     "nodejs",
-    "typescript"
+    "typescript",
+    "cli",
+    "testing",
+    "code-generation"
   ],
   "author": "Diana Tang",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DianaLeoTang/testpilot/issues"
+  },
+  "homepage": "https://github.com/DianaLeoTang/testpilot"
 }

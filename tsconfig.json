@@ -3,20 +3,16 @@
     "target": "ES2021",
     "module": "CommonJS",
     "moduleResolution": "Node",
-    "lib": ["ES2021", "DOM", "DOM.Iterable", "ScriptHost"],
+    "lib": ["ES2021"],
     "types": ["node", "jest"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": "src",
+    "declaration":true
   },
-  "baseUrl": ".",
-  "paths": {
-    "src/*": ["src/*"]
-  },
-  "include": ["index.ts", "src/**/*.ts", "tests/**/*.ts"]
+  "include": ["index.ts", "src/**/*.ts"]
 }
