@@ -11,7 +11,7 @@ const execAsync = promisify(exec);
 export async function runTests() {
   try {
     const jestPath = path.resolve(__dirname, "../node_modules/.bin/jest");
-    const configPath = path.resolve(__dirname, "../jest.default.config.js");
+    const configPath = path.resolve(__dirname, "../jest.config.js");
     if (!fs.existsSync(jestPath)) {
       console.error(
         "❌ Jest binary not found. Make sure dependencies are installed."
