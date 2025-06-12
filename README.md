@@ -1,71 +1,144 @@
-# 🧪 TestPilot
+# 🧪 AI-TestPilot Automated Testing Tool
 
-**TestPilot** is a universal MCP (Multi-Context Process) tool for automatic test script generation and execution, compatible with any Node.js project using TypeScript.
+**AI-TestPilot** is a universal automated test generator (MCP) for any Node.js + TypeScript project that can scan, generate, run tests and output reports with one click.
 
-## 🚀 Features
+## 🚀 Key Features
 
-- Automatically scans your source files
-- Generates Jest test stubs
-- Runs test cases and generates coverage reports
-- Supports all Node.js + TypeScript projects (NestJS, Express, Vite, etc.)
+- Automatically scan project source code
+- Auto-generate Jest test script stubs
+- Execute tests and generate coverage reports
+- Support for NestJS, Express, Vite and any Node.js projects
 
 ## 📦 Installation
 
+### Global Installation (Recommended)
 ```bash
-git clone https://github.com/your-repo/testpilot.git
+npm install -g ai-testpilot
+```
+
+### Install from Source
+```bash
+git clone https://github.com/DianaLeoTang/testpilot.git
 cd testpilot
 npm install
-````
+npm run build
+npm link
+```
 
 ## 🛠 Usage
 
+### Global Commands
 ```bash
-# 1. Generate test stubs
+# 1. Generate test stubs (tests/xxx.test.ts)
+ai-testpilot generate
+
+# 2. Execute tests (using Jest)
+ai-testpilot run
+
+# 3. View report path hints
+ai-testpilot report
+```
+
+### Local Project Scripts
+```bash
+# 1. Generate test stubs (tests/xxx.test.ts)
 npm run generate
 
-# 2. Run tests (uses Jest)
+# 2. Execute tests (using Jest)
 npm run run
 
-# 3. Show report location
+# 3. View report path hints
 npm run report
 ```
 
 ## 📁 Project Structure
 
 ```
-testpilot/
-├── index.ts              # CLI entry
+ai-testpilot/
+├── bin/
+│   └── cli.js            # CLI entry point
 ├── src/
-│   ├── scanner.ts        # Scans source files
-│   ├── generator.ts      # Generates test stubs
-│   ├── runner.ts         # Runs tests
-│   └── reporter.ts       # Shows report info
+│   ├── index.ts          # Main entry
+│   ├── scanner.ts        # Scan src/ source files
+│   ├── generator.ts      # Generate Jest stubs
+│   ├── runner.ts         # Call Jest to execute tests
+│   └── reporter.ts       # Output report location
 ├── templates/
-│   └── jest.test.stub.ts # Test stub template
-├── tests/                # Output tests folder
+│   └── jest.test.stub.ts # Test template
+├── tests/                # Auto-generated test files
+├── dist/                 # Compiled files
 ├── tsconfig.json
 └── package.json
 ```
 
-## 🧪 Output Example
+## ✅ Output Example
 
 ```ts
-// tests/yourModule.test.ts
 import { describe, it, expect } from '@jest/globals';
-import { yourModule } from '../src/yourModule';
+import { example } from '../src/example';
 
-describe('yourModule', () => {
+describe('example', () => {
   it('should work correctly', () => {
     expect(true).toBe(true);
   });
 });
 ```
 
-## 🧩 FAQ
+## 🎯 Use Cases
 
-### Why do I get `ENOENT`?
+- **Quick Start for New Projects**: Rapidly generate test framework for new TypeScript projects
+- **Add Tests to Existing Projects**: Generate test stubs for existing code lacking tests
+- **CI/CD Integration**: Part of automated testing workflow
+- **Code Quality Assurance**: Ensure projects have complete test coverage
 
-Make sure the `tests/` folder exists, or let `generator.ts` create it automatically.
+## ⚙️ Supported Project Types
+
+- NestJS applications
+- Express.js servers
+- Vite frontend projects
+- General Node.js + TypeScript projects
+- Any project using Jest
+
+## ❓ FAQ
+
+### Why do I get ENOENT error when running?
+
+Please ensure the `tests/` directory exists in your project, or add auto-creation logic in the code.
+
+### How to customize test templates?
+
+Modify the `templates/jest.test.stub.ts` file to customize the generated test templates.
+
+### Do you support other testing frameworks?
+
+Currently mainly supports Jest, with plans to support more testing frameworks in the future.
+
+## 🔧 Development
+
+### Local Development
+```bash
+git clone https://github.com/DianaLeoTang/testpilot.git
+cd testpilot
+npm install
+npm run build
+npm link
+ai-testpilot --help
+```
+
+### Run Tests
+```bash
+npm test
+```
+
+## 🤝 Contributing
+
+Issues and Pull Requests are welcome!
+
+## 🔗 Links
+
+- [GitHub Repository](https://github.com/DianaLeoTang/testpilot)
+- [NPM Package](https://npmjs.com/package/ai-testpilot)
+- [Issue Tracker](https://github.com/DianaLeoTang/testpilot/issues)
 
 ---
 
