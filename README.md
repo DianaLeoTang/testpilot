@@ -1,5 +1,9 @@
 # 🧪 AI-TestPilot Automated Testing Tool
 
+**Languages**: [English](README.md) | [中文](README-zh.md)
+
+---
+
 **AI-TestPilot** is a universal automated test generator (MCP) for any Node.js + TypeScript project that can scan, generate, run tests and output reports with one click.
 
 ## 🚀 Key Features

@@ -1,5 +1,9 @@
 # 🧪 AI-TestPilot 自动化测试工具
 
+**Languages**: [English](README.md) | [中文](README-zh.md)
+
+---
+
 **AI-TestPilot** 是一个通用于任意 Node.js + TypeScript 项目的自动化测试生成器（MCP），可一键扫描、生成、运行测试并输出报告。
 
 ## 🚀 功能亮点
