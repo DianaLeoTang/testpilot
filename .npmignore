@@ -1,8 +1,8 @@
 # .npmignore
 src/
 tests/
+coverage/
 node_modules/
 *.log
 tsconfig.json
-jest.config.js
 pnpm-lock.yaml

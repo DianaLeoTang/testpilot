@@ -10,7 +10,8 @@
   "files": [
     "bin",
     "dist",
-    "templates"
+    "templates",
+    "jest.default.config.js"
   ],
   "repository": {
     "type": "git",
