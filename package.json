@@ -1,6 +1,6 @@
 {
   "name": "ai-testpilot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "An AI-powered zero-config CLI for generating test stubs for Node.js projects",
   "bin": {
     "ai-testpilot": "./bin/cli.js"
@@ -35,12 +35,12 @@
   "bundledDependencies": [
     "jest",
     "@types/jest",
-    "ts-jest", 
+    "ts-jest",
     "typescript"
   ],
   "devDependencies": {
     "@types/node": "^24.0.0",
-    "ts-node": "^10.9.2"  
+    "ts-node": "^10.9.2"
   },
   "keywords": [
     "ai",
