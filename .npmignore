@@ -2,7 +2,6 @@
 src/
 tests/
 coverage/
-node_modules/
 *.log
 tsconfig.json
 pnpm-lock.yaml

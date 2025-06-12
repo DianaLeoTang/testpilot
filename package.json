@@ -32,6 +32,12 @@
     "ts-jest": "^29.1.1",
     "typescript": "^5.4.5"
   },
+  "bundledDependencies": [
+    "jest",
+    "@types/jest",
+    "ts-jest", 
+    "typescript"
+  ],
   "devDependencies": {
     "@types/node": "^24.0.0",
     "ts-node": "^10.9.2"  
