@@ -1,4 +1,5 @@
 # AI TestPilot
+**Languages**: [English](README.md) | [中文](README-zh.md)
 
 Automatically generate Jest test cases for your projects. Zero configuration, ready to use out of the box.
 
