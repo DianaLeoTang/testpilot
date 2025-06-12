@@ -1,8 +1,10 @@
 describe('runner', () => {
-  it('should work correctly', () => {
-    expect(true).toBe(true);
+  it('should be importable without errors', () => {
+    expect(() => {
+      require('../src/runner');
+    }).not.toThrow();
   });
 });
 
-// import { runner } from '../src/runner';
-// Add actual test logic above
+// No exports detected in this file
+// If there should be exports, check the source file and update imports manually

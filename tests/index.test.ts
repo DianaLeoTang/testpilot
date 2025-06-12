@@ -1,8 +1,10 @@
 describe('index', () => {
-  it('should work correctly', () => {
-    expect(true).toBe(true);
+  it('should be importable without errors', () => {
+    expect(() => {
+      require('../src/index');
+    }).not.toThrow();
   });
 });
 
-// import { index } from '../src/index';
-// Add actual test logic above
+// No exports detected in this file
+// If there should be exports, check the source file and update imports manually
