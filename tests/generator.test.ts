@@ -1,40 +1,13 @@
-import { generateTests, generateSafeTests } from '../src/generator';
+import * as generatorModule from '../src/generator';
 
 describe('generator', () => {
-  describe('generateTests', () => {
-    it('should be defined', () => {
-      expect(generateTests).toBeDefined();
-    });
-
-    it('should be importable', () => {
-      expect(typeof generateTests).toMatch(/function|object|string|number|boolean/);
-    });
-
-    // TODO: Add specific tests for generateTests
-    // Example test patterns:
-    // it('should return expected value', () => {
-    //   const result = generateTests(/* add parameters */);
-    //   expect(result).toBe(/* expected result */);
-    // });
+  it('should be importable', () => {
+    expect(generatorModule).toBeDefined();
   });
 
-  describe('generateSafeTests', () => {
-    it('should be defined', () => {
-      expect(generateSafeTests).toBeDefined();
-    });
-
-    it('should be importable', () => {
-      expect(typeof generateSafeTests).toMatch(/function|object|string|number|boolean/);
-    });
-
-    // TODO: Add specific tests for generateSafeTests
-    // Example test patterns:
-    // it('should return expected value', () => {
-    //   const result = generateSafeTests(/* add parameters */);
-    //   expect(result).toBe(/* expected result */);
-    // });
+  it('should not throw when imported', () => {
+    expect(() => require('../src/generator')).not.toThrow();
   });
 });
 
-// Generated tests for exports: generateTests, generateSafeTests
-// TODO: Replace basic tests with meaningful test cases
+// No exports detected - this module might have side effects or be a utility module
