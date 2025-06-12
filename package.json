@@ -42,16 +42,6 @@
     "@types/node": "^24.0.0",
     "ts-node": "^10.9.2"  
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "testMatch": [
-      "**/tests/**/*.test.ts"
-    ],
-    "moduleNameMapper": {
-      "^src/(.*)$": "<rootDir>/src/$1"
-    }
-  },
   "keywords": [
     "ai",
     "mcp",
