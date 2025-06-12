@@ -12,6 +12,12 @@ if (!fs.existsSync(distPath)) {
 }
 
 try {
+  // 获取命令行参数
+  const args = process.argv.slice(2);
+  
+  // 设置命令行参数到 process.argv，这样 dist/index.js 可以读取到
+  process.argv = ['node', 'ai-testpilot', ...args];
+  
   require('../dist/index.js');
 } catch (error) {
   console.error('Error running ai-testpilot:', error.message);
