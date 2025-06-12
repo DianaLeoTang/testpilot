@@ -1,6 +1,6 @@
 {
   "name": "ai-testpilot",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "An AI-powered zero-config CLI for generating test stubs for Node.js projects",
   "bin": {
     "ai-testpilot": "./bin/cli.js"
