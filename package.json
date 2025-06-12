@@ -1,6 +1,6 @@
 {
   "name": "ai-testpilot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An AI-powered zero-config CLI for generating test stubs for Node.js projects",
   "bin": {
     "ai-testpilot": "./bin/cli.js"
@@ -17,18 +17,20 @@
     "url": "git+https://github.com/DianaLeoTang/testpilot.git"
   },
   "scripts": {
-    "prepublishOnly": "npm run build",
     "build": "tsc",
     "generate": "ts-node src/index.ts generate",
     "run": "ts-node src/index.ts run",
     "report": "ts-node src/index.ts report",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.14",
+    "ts-jest": "^29.1.1"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.14",
     "@types/node": "^24.0.0",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
